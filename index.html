@@ -623,35 +623,11 @@
     </section>
 
     <!-- Reviews Section -->
-    <section id="reviews" class="reviews">
-        <div class="container">
-            <h2 class="section-title fade-in">What Our Customers Say</h2>
-            <div id="reviewsContainer" class="reviews-grid">
-                <div class="review-card fade-in">
-                    <div class="review-header">
-                        <span class="reviewer-name">Sarah M.</span>
-                        <span class="stars">★★★★★</span>
-                    </div>
-                    <p class="review-body">Miguel's team fixed my car's engine issue in no time. Honest pricing and great service!</p>
-                </div>
-                <div class="review-card fade-in">
-                    <div class="review-header">
-                        <span class="reviewer-name">James R.</span>
-                        <span class="stars">★★★★★</span>
-                    </div>
-                    <p class="review-body">Best brake service I've ever had. Professional, fast, and reliable.</p>
-                </div>
-                <div class="review-card fade-in">
-                    <div class="review-header">
-                        <span class="reviewer-name">Emily T.</span>
-                        <span class="stars">★★★★★</span>
-                    </div>
-                    <p class="review-body">They handled my AC repair perfectly. My car feels brand new!</p>
-                </div>
-            </div>
-            <button id="showMoreBtn" class="show-more-btn hidden">Show More Reviews</button>
-        </div>
-    </section>
+   <div id="reviewsContainer" class="reviews-grid">
+                            </div>
+            <button id="showMoreBtn" class="show-more-btn hidden">Show More Reviews</button>
+        </div>
+    </section>
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
@@ -894,7 +870,7 @@
                         <span class="reviewer-name">${review.name}</span>
                         <span class="stars">${review.rating}</span>
                     </div>
-                    <p class="review-body">${review.text}</p>
+                    <p class="review-body">${review.body}</p>
                 `;
                 reviewsContainer.appendChild(reviewCard);
                 observer.observe(reviewCard);
