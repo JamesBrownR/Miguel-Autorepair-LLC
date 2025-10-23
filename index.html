@@ -728,8 +728,7 @@
         // Review show more button (placeholder)
         const reviewsContainer = document.getElementById('reviewsContainer');
         const showMoreBtn = document.getElementById('showMoreBtn');
-        const moreReviews = [
-    {
+const allReviews = [    {
         "name": "Devin Griffiths",
         "rating": 5,
         "body": "The gentleman named German came out as my roadside support. I thought we needed a jump start, it turned out to be a loose wire on the starter. They saved me hundreds, if not thousands of dollars. Will definitely use them again! Thank you guys so much!"
@@ -861,22 +860,42 @@
     }
 ];
 
-        showMoreBtn.addEventListener('click', () => {
-            moreReviews.forEach(review => {
-                const reviewCard = document.createElement('div');
-                reviewCard.className = 'review-card fade-in';
-                reviewCard.innerHTML = `
-                    <div class="review-header">
-                        <span class="reviewer-name">${review.name}</span>
-                        <span class="stars">${review.rating}</span>
-                    </div>
-                    <p class="review-body">${review.body}</p>
-                `;
-                reviewsContainer.appendChild(reviewCard);
-                observer.observe(reviewCard);
-            });
-            showMoreBtn.classList.add('hidden');
-        });
+       const initialCount = 4; // Number of reviews to show initially
+        let reviewsShown = 0;
+
+        function createReviewCard(review) {
+            const reviewCard = document.createElement('div');
+            reviewCard.className = 'review-card fade-in';
+            reviewCard.innerHTML = `
+                <div class="review-header">
+                    <span class="reviewer-name">${review.name}</span>
+                    <span class="stars">${'★'.repeat(review.rating)}</span>
+                </div>
+                <p class="review-body">${review.body}</p>
+            `;
+            reviewsContainer.appendChild(reviewCard);
+            observer.observe(reviewCard);
+        }
+
+        function displayReviews(start, end) {
+            for (let i = start; i < end && i < allReviews.length; i++) {
+                createReviewCard(allReviews[i]);
+                reviewsShown++;
+            }
+            if (reviewsShown < allReviews.length) {
+                showMoreBtn.classList.remove('hidden');
+            } else {
+                showMoreBtn.classList.add('hidden');
+            }
+        }
+        
+        // Initial load: show the first 4 reviews
+        displayReviews(0, initialCount);
+
+        showMoreBtn.addEventListener('click', () => {
+            // Display the remaining reviews
+            displayReviews(reviewsShown, allReviews.length);
+        });
 
         // Show the button if more reviews are available
         if (moreReviews.length > 0) {
