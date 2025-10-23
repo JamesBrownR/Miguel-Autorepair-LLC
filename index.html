@@ -693,7 +693,7 @@
                         <div class="info-item"><strong>Sunday:</strong> Closed</div>
                     </div>
                     <div class="map-container fade-in">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.888143678614!2d-111.91341368461427!3d40.74215997932877!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8752f5c7c3b6b5b7%3A0x9c9e7a7b6a8b7b6a!2s1415%20S%20700%20W%2C%20Salt%20Lake%20City%2C%20UT%2084104!5e0!3m2!1sen!2sus!4v1634567890123!5m2!1sen!2sus" allowfullscreen loading="lazy"></iframe>
+                       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.077006296384!2d-111.91204452440161!3d40.73833103600396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8752f4d73f4d5f13%3A0xc53b3094516c3237!2sMiguel%20Autorepair%20LLC!5e0!3m2!1sen!2sus!4v1761180333404!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
             </div>
@@ -753,17 +753,137 @@
         const reviewsContainer = document.getElementById('reviewsContainer');
         const showMoreBtn = document.getElementById('showMoreBtn');
         const moreReviews = [
-            {
-                name: 'Michael P.',
-                rating: '★★★★★',
-                text: 'Quick and reliable oil change service. Highly recommend!'
-            },
-            {
-                name: 'Lisa K.',
-                rating: '★★★★★',
-                text: 'Fixed my transmission issue at a fair price. Great experience.'
-            }
-        ];
+    {
+        "name": "Devin Griffiths",
+        "rating": 5,
+        "body": "The gentleman named German came out as my roadside support. I thought we needed a jump start, it turned out to be a loose wire on the starter. They saved me hundreds, if not thousands of dollars. Will definitely use them again! Thank you guys so much!"
+    },
+    {
+        "name": "Tyler Jensen",
+        "rating": 5,
+        "body": "Totally recommend. The guy his name is Reese super friendly and extremely helpful"
+    },
+    {
+        "name": "Juan Carlos Murguia",
+        "rating": 5,
+        "body": "Really professional in he's work he did an Awesome job repairing my 2022 Ford Bronco it look better than new :)"
+    },
+    {
+        "name": "Moji PSX",
+        "rating": 5,
+        "body": "Very professional and great prices! Miguel did an amazing job installing a spoiler on my honda civic. I highly recommend!"
+    },
+    {
+        "name": "Rowan",
+        "rating": 5,
+        "body": "I had my ram promaster 2500 engine replaced in a few business days for 3500$. Incredible work, very professional."
+    },
+    {
+        "name": "Denis B",
+        "rating": 5,
+        "body": "Very satisfied, they painted the trunk in one day. Fast, high-quality and inexpensive, I recommend them."
+    },
+    {
+        "name": "johan camargo abril",
+        "rating": 5,
+        "body": "I repaired my car with this team and I had an excellent service, excellent price in a very short time. I recommend it."
+    },
+    {
+        "name": "Angelica Sanabria",
+        "rating": 5,
+        "body": "very professional on the job that they do good prices and excellent service if you're looking for a good job and affordable go to miguel's auto repair ask for miguel"
+    },
+    {
+        "name": "Troy Thompson",
+        "rating": 5,
+        "body": "Great guys! Got the work done on time and did a great job! Will be back!!!"
+    },
+    {
+        "name": "Sergio Valenzuela",
+        "rating": 5,
+        "body": "excellent service"
+    },
+    {
+        "name": "Dallas Neri",
+        "rating": 5,
+        "body": "Excellent service and professionalism"
+    },
+    {
+        "name": "Darin Christensen",
+        "rating": 5,
+        "body": "Positive Punctuality, Quality, Professionalism, Value… More"
+    },
+    {
+        "name": "Ginna Vigoya",
+        "rating": 5,
+        "body": ""
+    },
+    {
+        "name": "Carolina Ruiz",
+        "rating": 5,
+        "body": ""
+    },
+    {
+        "name": "Denis Lewis",
+        "rating": 5,
+        "body": ""
+    },
+    {
+        "name": "Exneider Fontecha",
+        "rating": 5,
+        "body": ""
+    },
+    {
+        "name": "Brenden McGarrity",
+        "rating": 5,
+        "body": ""
+    },
+    {
+        "name": "israel Perez",
+        "rating": 5,
+        "body": ""
+    },
+    {
+        "name": "Israel Perez",
+        "rating": 5,
+        "body": ""
+    },
+    {
+        "name": "Miguel Ordaz",
+        "rating": 5,
+        "body": ""
+    },
+    {
+        "name": "Israel Giles",
+        "rating": 5,
+        "body": "Good costumer service"
+    },
+    {
+        "name": "reyna mariana",
+        "rating": 4,
+        "body": ""
+    },
+    {
+        "name": "Russell Gray",
+        "rating": 3,
+        "body": ""
+    },
+    {
+        "name": "Maria B",
+        "rating": 1,
+        "body": "Irresponsible. I am writing to express my extreme dissatisfaction with the roadside assistance service I received last night 3/17/25. … More"
+    },
+    {
+        "name": "Matthew",
+        "rating": 1,
+        "body": "He was supposed to pick up my vehicle through road side assistance. Waited for 90 minutes, wouldn’t answer my calls, wouldn’t answer the calls from road side assistance. Wouldn’t recommend"
+    },
+    {
+        "name": "D LoJo",
+        "rating": 1,
+        "body": "NEVER use them for towing. After waiting over an hour, they canceled and we had to get another company and wait again."
+    }
+];
 
         showMoreBtn.addEventListener('click', () => {
             moreReviews.forEach(review => {
